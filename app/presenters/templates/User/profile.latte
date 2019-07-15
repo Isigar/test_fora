@@ -1,0 +1,23 @@
+{block content}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Profil</h1>
+            </div>
+            <div class="col-md-4 text-right">
+                {if $user->getId() == $usr->getId()}
+                    <a href="{link edit}" class="btn btn-outline-danger mt-3"><i class="fa fa-edit"></i> {_front.profile.edit}</a>
+                {/if}
+            </div>
+        </div>
+
+        <h2>{$usr->getName()} {$usr->getSurname()}</h2>
+        <p>Uživatel je zaregistravný od {$usr->getCreateDate()|date:"d.m.Y H:i"}</p>
+
+        <br>
+        <h3>Motto:</h3>
+        <blockquote class="blockquote">
+            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+    </div>
+{/block}

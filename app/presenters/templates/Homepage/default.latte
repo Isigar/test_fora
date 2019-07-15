@@ -1,0 +1,25 @@
+{block content}
+	<div class="container">
+		<h1>{_front.home}</h1>
+
+		<div class="card">
+			<div class="card-header">
+				<div class="row">
+					<div class="col-md-8">
+						<h2>{_front.post}</h2>
+					</div>
+					<div class="col-md-4">
+						<div class="text-right">
+							<a href="" n:if="$user->isLoggedIn()" data-toggle="tooltip" data-placement="top" title="{_front.add_post}" class="btn btn-primary">
+								<i class="fa fa-plus"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+{/block}

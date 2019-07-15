@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Fórum!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link {ifCurrent Homepage:default}active{/ifCurrent}" href="{link Homepage:default}">{_menu.home}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{link Post:default, 1}">{_menu.all_threads}</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            {snippet loginBtn}
+                {if $user->isLoggedIn()}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {$user->identity->name} {$user->identity->surname}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{link User:profile,$user->getId()}">Profil</a>
+                            <a class="dropdown-item" href="#">Vaše příspěvky</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{link logout!}">Odhlásit</a>
+                        </div>
+                    </li>
+                {else}
+                    {control login:btn}
+                {/if}
+            {/snippet}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-language"></i>
+                    {_menu.lang}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{link changeLang!,'cs'}">{_menu.cz}</a>
+                    <a class="dropdown-item" href="{link changeLang!,'en'}">{_menu.en}</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

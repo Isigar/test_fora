@@ -1,0 +1,19 @@
+login:
+    title: "Přihlásit"
+    not_found: "Váš uživatelský účet nebyl nalezen!"
+    pass: "Vaše heslo není správné, můžete použít formulář pro zapomenuté heslo pokud si již nevíte rady"
+    success: "Vítejte zpět!"
+
+register:
+    title: "Zaregistrovat"
+    success: "Úspěšně jste se registrovali! Napište první příspěvek!"
+    cannot_create: "Nastala chyba a nepodařilo se nám vytvořit váš účet."
+profile:
+    edit: "Upravit profil"
+add_post: Přidat příspěvek do sekce
+logout: "Úspěšně jste se odhlásili, někdy naviděnou!"
+edit_profile: Editovat profil
+edit_passwords: Změnit heslo
+post: Příspěvky
+home: Nejnovější zprávy
+need_login: "Pro tuto akci se musíte přihlásit!"
